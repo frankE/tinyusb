@@ -184,6 +184,16 @@ static usbh_class_driver_t const usbh_class_drivers[] =
       .open       = cush_open_subtask,
       .xfer_cb    = cush_isr,
       .close      = cush_close
+    },
+  #endif
+  #if CFG_TUH_XBONE_PAD
+    {
+      DRIVER_NAME("XBONE")
+      .init       = xbone_pad_init,
+      .open       = xbone_pad_open,
+      .set_config = xbone_pad_set_config,
+      .xfer_cb    = xbone_pad_xfer_cb,
+      .close      = xbone_pad_close
     }
   #endif
 };

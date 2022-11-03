@@ -60,6 +60,10 @@
     #include "class/vendor/vendor_host.h"
   #endif
 
+  #if CFG_TUH_XBONE_PAD
+    #include "class/xbone_pad/xbone_pad_host.h"
+  #endif
+
 #endif
 
 //------------- DEVICE -------------//
